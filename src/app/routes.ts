@@ -33,9 +33,9 @@ const routeConfig: Routes = [{
     title: 'Menu'
 },
 {
-    path: 'services',
+    path: 'service',
     component: ServicesComponent,
-    title: 'Services'
+    title: 'Service'
 },{
     path: 'team',
     component: TeamComponent,

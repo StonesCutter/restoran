@@ -1,0 +1,85 @@
+<div class="header" [class.sticky]="isSticky && windowWidth>1000"
+    [style.backgroundColor]="(!isSticky && windowWidth>1400) ? 'rgba(0, 0, 0, 0.5)' : '#0f172b'">
+    <div class="logo-container">
+        <h1><fa-icon [icon]="faUtensils" style="margin-right: 15px"></fa-icon>Restoran</h1>
+    </div>
+    <div class="right-side-header-container">
+        <div class="right-side-header" *ngIf="windowWidth >= 1000">
+            <div class="header-option" (click)='navigateTo("/"); selectSection(1)'
+                [style.color]="sectionSelected === 1 ?  '#fea116' : 'white'">HOME</div>
+            <div class="header-option" (click)='navigateTo("about"); selectSection(2)'
+                [style.color]="sectionSelected === 2 ?  '#fea116' : 'white'">ABOUT</div>
+            <div class="header-option" (click)='navigateTo("service"); selectSection(3)'
+                [style.color]="sectionSelected === 3 ?  '#fea116' : 'white'">SERVICE</div>
+            <div class="header-option" (click)='navigateTo("menu"); selectSection(4)'
+                [style.color]="sectionSelected === 4 ?  '#fea116' : 'white'">MENU</div>
+            <div mat-button [matMenuTriggerFor]="menu" class="header-option">
+                PAGES <fa-icon [icon]="faCaretDown"></fa-icon>
+            </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)='navigateTo("booking"); selectPage(1)'
+                    [style.backgroundColor]="pageSelected === 1 ?  '#fea116' : 'white'">
+                    <div [style.color]="pageSelected === 1 ?  'white' : 'black'">Booking</div>
+                </button>
+                <button mat-menu-item (click)='navigateTo("team"); selectPage(2)'
+                    [style.backgroundColor]="pageSelected === 2 ?  '#fea116' : 'white'">
+                    <div [style.color]="pageSelected === 2 ?  'white' : 'black'">Our Team</div>
+                </button>
+                <button mat-menu-item (click)='navigateTo("testimonial"); selectPage(3)'
+                    [style.backgroundColor]="pageSelected === 3 ?  '#fea116' : 'white'">
+                    <div [style.color]="pageSelected === 3 ?  'white' : 'black'">Testimonial</div>
+                </button>
+            </mat-menu>
+            <div class="header-option" (click)='navigateTo("contact"); selectSection(5)'
+                [style.color]="sectionSelected === 5 ?  '#fea116' : 'white'">CONTACT</div>
+            <div class="header-option">
+                <app-squared-button [buttonText]="'BOOK A TABLE'"
+                    (buttonClicked)="onButtonClicked()"></app-squared-button>
+            </div>
+        </div>
+        <div class="burger-menu-container">
+            <div class="burger-menu" [style.border]="isMenuOpen ? '5px solid' : '1px solid'" (click)="toggleMenu()">
+                <fa-icon [icon]="faBars" style="margin-top: 3px;"></fa-icon>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mobile-menu" *ngIf="isMenuOpen && !(windowWidth >= 1000)">
+    <div class="header-option header-option-mobile" (click)='navigateTo("/"); toggleMenu(); selectSection(1)'
+        [style.color]="sectionSelected === 1 ?  '#fea116' : 'white'">HOME</div>
+    <div class="header-option header-option-mobile" (click)='navigateTo("about"); toggleMenu(); selectSection(2)'
+        [style.color]="sectionSelected === 2 ?  '#fea116' : 'white'">ABOUT</div>
+    <div class="header-option header-option-mobile" (click)='navigateTo("service"); toggleMenu(); selectSection(3)'
+        [style.color]="sectionSelected === 3 ?  '#fea116' : 'white'">SERVICE</div>
+    <div class="header-option header-option-mobile" (click)='navigateTo("menu"); toggleMenu(); selectSection(4)'
+        [style.color]="sectionSelected === 4 ?  '#fea116' : 'white'">MENU</div>
+    <div mat-button [matMenuTriggerFor]="menu" (click)='openedMobileMenuPage()'
+        class="header-option header-option-mobile" style="position: relative;">
+        PAGES <fa-icon [icon]="faCaretDown"></fa-icon>
+    </div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)='navigateTo("booking"); selectPage(1); toggleMenu()'
+            [style.backgroundColor]="pageSelected === 1 ?  '#fea116' : 'white'">
+            <div [style.color]="pageSelected === 1 ?  'white' : 'black'" style="overflow: hidden; width: 20000px">
+                Booking
+            </div>
+        </button>
+        <button mat-menu-item (click)='navigateTo("team"); selectPage(2); toggleMenu()'
+            [style.backgroundColor]="pageSelected === 2 ?  '#fea116' : 'white'">
+            <div [style.color]="pageSelected === 2 ?  'white' : 'black'">Our Team</div>
+        </button>
+        <button mat-menu-item (click)='navigateTo("testimonial"); selectPage(3); toggleMenu()'
+            [style.backgroundColor]="pageSelected === 3 ?  '#fea116' : 'white'">
+            <div [style.color]="pageSelected === 3 ?  'white' : 'black'">Testimonial</div>
+        </button>
+    </mat-menu>
+    <!-- <div *ngIf="isOpenMobileMenuPage" style="margin-bottom: 100px;">
+
+    </div> -->
+    <div class="header-option header-option-mobile" (click)='navigateTo("contact"); toggleMenu(); selectSection(5)'
+        [style.color]="sectionSelected === 5 ?  '#fea116' : 'white'">CONTACT</div>
+    <div class="header-option" style="width: 180px">
+        <app-squared-button [buttonText]="'BOOK A TABLE'"
+            (buttonClicked)="onButtonClicked(); toggleMenu()"></app-squared-button>
+    </div>
+</div>

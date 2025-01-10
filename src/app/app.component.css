@@ -1,0 +1,28 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Heebo", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  background-color: purple;
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Heebo", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover {
+  min-width: 1320px;
+  background-color: black;
+  height: 300px;
+}

@@ -11,6 +11,11 @@ import { BookingComponent } from './pages/booking/booking.component';
 import { TeamComponent } from './pages/team/team.component';
 import { TestimonialComponent } from './pages/testimonial/testimonial.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SquaredButtonComponent } from './components/squared-button/squared-button.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,11 +27,16 @@ import { ContactComponent } from './pages/contact/contact.component';
     BookingComponent,
     TeamComponent,
     TestimonialComponent,
-    ContactComponent
+    ContactComponent,
+    HeaderComponent,
+    SquaredButtonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule,
+    MatMenuModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

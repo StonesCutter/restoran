@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+  font-family: "Nunito";
+  src: url("./assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito-bold";
+  src: url("./assets/fonts/Nunito-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("./assets/fonts/Heebo-Medium.ttf") format("truetype");
+}
+
+:root {
+  --primary-font: "Nunito-bold", sans-serif;
+  --secondary-font: "Heebo", sans-serif;
+  --font-size-base: 15px;
+  --font-size-heading: 2rem;
+  --bs-primary: #fea116;
+  --bs-dark: #0f172b;
+  --bs-light: #f1f8ff;
+  --bs-warning: #ffc107;
+  --bs-gray: #6c757d;
+}

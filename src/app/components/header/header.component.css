@@ -1,0 +1,128 @@
+.header {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: var(--bs-dark);
+}
+
+.logo-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding-left: 40px;
+  color: var(--bs-primary);
+  font-family: var(--primary-font);
+  font-weight: 900;
+}
+
+.logo-container h1 {
+  font-weight: 900;
+  width: max-content;
+}
+.right-side-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 100%;
+}
+.right-side-header {
+  padding-left: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: var(--font-size-base);
+}
+
+.header-option {
+  transition: color 0.2s ease-in-out;
+  margin-right: 20px;
+}
+
+.header-option:hover {
+  cursor: pointer;
+  color: var(--bs-primary);
+  transition: color 0.2s ease-in-out;
+}
+
+.header-option-mobile {
+  margin-bottom: 20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu-container {
+  display: none;
+}
+
+.mobile-menu {
+  display: block;
+  top: 100%;
+  left: 0;
+  background-color: var(--bs-dark);
+  padding: 20px;
+  color: white;
+}
+
+::ng-deep .my-menu .mat-menu-panel {
+  background-color: white;
+}
+
+::ng-deep .mat-mdc-menu-panel {
+  max-width: none !important;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+}
+::ng-deep .cdk-overlay-pane {
+  margin-left: 20px;
+}
+
+@media (min-width: 1400px) {
+  .header {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media (max-width: 1000px) {
+  /* .right-side-header {
+    display: none;
+  } */
+
+  .burger-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    height: 100%;
+    width: 60px;
+  }
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    border: 5px solid var(--bs-gray);
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    color: var(--bs-gray);
+  }
+
+  .burger-menu:hover {
+    color: var(--bs-primary);
+    cursor: pointer;
+  }
+}

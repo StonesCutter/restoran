@@ -1,0 +1,17 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--bs-primary);
+  color: white;
+  font-family: var(--secondary-font);
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--bs-warning);
+}
