@@ -1,0 +1,35 @@
+<div *ngIf="isHomepage" class="cover-container">
+    <div class="homepage-cover">
+        <div class="homepage-content">
+            <h1 [style.marginTop]="!(windowWidth > 1000) ? '20vh' : '0px'">Enjoy Our</h1>
+            <h1>Delicious Meal</h1>
+            <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+                ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+            <div class="btn-book">
+                <div class="btn-book-container">
+                    <app-squared-button [buttonText]="'BOOK A TABLE'"
+                        (buttonClicked)="onButtonClicked()"></app-squared-button>
+                </div>
+            </div>
+        </div>
+        <div class="spinning-dish">
+            <img src="../../../assets/images/hero.png" [style.transform]="'rotate(' + rotationDegree + 'deg)'"
+                alt="Spinning Dish" />
+        </div>
+    </div>
+</div>
+<div *ngIf="!isHomepage" class="cover-container-nohome">
+    <div class="innerpage-cover">
+        <div style="margin-top: -40px;">
+            <h1>{{ title }}</h1>
+            <div class="path">
+                <span *ngFor="let segment of path.split(' / '); let last = last">
+                    <span class="path">
+                        <div class="path-firstpart">HOME</div> / <div class="path-middlepart">PAGES</div>/ <div
+                            class="path-lastpart">{{ segment.toUpperCase() }}</div>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

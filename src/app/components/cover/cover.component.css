@@ -1,0 +1,145 @@
+.path {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  color: var(--bs-gray);
+
+  .path-firstpart {
+    color: var(--bs-primary);
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .path-middlepart {
+    color: var(--bs-primary);
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .path-lastpart {
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+h1 {
+  font-family: var(--primary-font);
+  font-size: calc(1.525rem + 3.3vw);
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.cover-container {
+  width: 100%;
+  position: relative;
+  color: white;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cover-container-nohome {
+  width: 100%;
+  position: relative;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.homepage-cover {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  padding-top: 0px;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .homepage-content {
+    flex: 1;
+
+    h1 {
+      font-size: calc(1.1rem + 3.3vw);
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-top: -30px;
+      font-family: var(--primary-font);
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .btn-book {
+      font-size: 18px;
+      width: auto;
+      color: white;
+      border: none;
+      cursor: pointer;
+      max-width: 200px;
+    }
+  }
+
+  .spinning-dish {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: imgRotate 150s linear infinite;
+
+    img {
+      max-width: 95%;
+      height: auto;
+      transform-origin: center;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .spinning-dish {
+    margin-top: 50px;
+    width: 120%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .btn-book {
+    display: flex;
+    min-width: 100%;
+    justify-content: center;
+  }
+  .btn-book-container {
+    max-width: auto;
+  }
+  .spinning-dish {
+    max-width: 750px;
+  }
+  .homepage-cover {
+    margin-top: 1.3rem;
+  }
+}
+
+.innerpage-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+@keyframes imgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

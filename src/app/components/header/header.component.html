@@ -1,18 +1,23 @@
 <div class="header" [class.sticky]="isSticky && windowWidth>1000"
-    [style.backgroundColor]="(!isSticky && windowWidth>1400) ? 'rgba(0, 0, 0, 0.5)' : '#0f172b'">
+    [style.backgroundColor]="(!isSticky && windowWidth>1000) ? 'rgba(0, 0, 0, 0.0)' : '#0f172b'">
     <div class="logo-container">
         <h1><fa-icon [icon]="faUtensils" style="margin-right: 15px"></fa-icon>Restoran</h1>
     </div>
     <div class="right-side-header-container">
         <div class="right-side-header" *ngIf="windowWidth >= 1000">
-            <div class="header-option" (click)='navigateTo("/"); selectSection(1)'
-                [style.color]="sectionSelected === 1 ?  '#fea116' : 'white'">HOME</div>
-            <div class="header-option" (click)='navigateTo("about"); selectSection(2)'
-                [style.color]="sectionSelected === 2 ?  '#fea116' : 'white'">ABOUT</div>
+            <div class="header-option" (click)="navigateTo(''); selectSection(1)"
+                [ngClass]="{'selected': sectionSelected === 1}">
+                HOME
+            </div>
+            <div class="header-option" (click)="navigateTo('about'); selectSection(2)"
+                [ngClass]="{'selected': sectionSelected === 2}">
+                ABOUT
+            </div>
+
             <div class="header-option" (click)='navigateTo("service"); selectSection(3)'
-                [style.color]="sectionSelected === 3 ?  '#fea116' : 'white'">SERVICE</div>
+                [ngClass]="{'selected': sectionSelected === 3}">SERVICE</div>
             <div class="header-option" (click)='navigateTo("menu"); selectSection(4)'
-                [style.color]="sectionSelected === 4 ?  '#fea116' : 'white'">MENU</div>
+                [ngClass]="{'selected': sectionSelected === 4}">MENU</div>
             <div mat-button [matMenuTriggerFor]="menu" class="header-option">
                 PAGES <fa-icon [icon]="faCaretDown"></fa-icon>
             </div>
@@ -31,7 +36,7 @@
                 </button>
             </mat-menu>
             <div class="header-option" (click)='navigateTo("contact"); selectSection(5)'
-                [style.color]="sectionSelected === 5 ?  '#fea116' : 'white'">CONTACT</div>
+                [ngClass]="{'selected': sectionSelected === 5}">CONTACT</div>
             <div class="header-option">
                 <app-squared-button [buttonText]="'BOOK A TABLE'"
                     (buttonClicked)="onButtonClicked()"></app-squared-button>
@@ -45,14 +50,14 @@
     </div>
 </div>
 <div class="mobile-menu" *ngIf="isMenuOpen && !(windowWidth >= 1000)">
-    <div class="header-option header-option-mobile" (click)='navigateTo("/"); toggleMenu(); selectSection(1)'
-        [style.color]="sectionSelected === 1 ?  '#fea116' : 'white'">HOME</div>
+    <div class="header-option header-option-mobile" (click)='navigateTo(""); toggleMenu(); selectSection(1)'
+        [ngClass]="{'selected': sectionSelected === 1}">HOME</div>
     <div class="header-option header-option-mobile" (click)='navigateTo("about"); toggleMenu(); selectSection(2)'
-        [style.color]="sectionSelected === 2 ?  '#fea116' : 'white'">ABOUT</div>
+        [ngClass]="{'selected': sectionSelected === 2}">ABOUT</div>
     <div class="header-option header-option-mobile" (click)='navigateTo("service"); toggleMenu(); selectSection(3)'
-        [style.color]="sectionSelected === 3 ?  '#fea116' : 'white'">SERVICE</div>
+        [ngClass]="{'selected': sectionSelected === 3}">SERVICE</div>
     <div class="header-option header-option-mobile" (click)='navigateTo("menu"); toggleMenu(); selectSection(4)'
-        [style.color]="sectionSelected === 4 ?  '#fea116' : 'white'">MENU</div>
+        [ngClass]="{'selected': sectionSelected === 4}">MENU</div>
     <div mat-button [matMenuTriggerFor]="menu" (click)='openedMobileMenuPage()'
         class="header-option header-option-mobile" style="position: relative;">
         PAGES <fa-icon [icon]="faCaretDown"></fa-icon>
@@ -77,7 +82,7 @@
 
     </div> -->
     <div class="header-option header-option-mobile" (click)='navigateTo("contact"); toggleMenu(); selectSection(5)'
-        [style.color]="sectionSelected === 5 ?  '#fea116' : 'white'">CONTACT</div>
+        [ngClass]="{'selected': sectionSelected === 5}">CONTACT</div>
     <div class="header-option" style="width: 180px">
         <app-squared-button [buttonText]="'BOOK A TABLE'"
             (buttonClicked)="onButtonClicked(); toggleMenu()"></app-squared-button>

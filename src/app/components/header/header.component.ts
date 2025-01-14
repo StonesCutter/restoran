@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-header',
@@ -25,13 +26,15 @@ export class HeaderComponent {
 
   @Input() windowWidth: number = 0;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, public utils: UtilsService) {}
+ 
 
   onButtonClicked() {
     this.router.navigate(['/contact']); 
   }
 
   navigateTo(path: string){
+    this.utils.navigationUtil(path)
     this.router.navigate([path]); 
   }
 

@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SquaredButtonComponent } from './components/squared-button/squared-button.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoverComponent } from './components/cover/cover.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TestimonialComponent,
     ContactComponent,
     HeaderComponent,
-    SquaredButtonComponent
+    SquaredButtonComponent,
+    CoverComponent
   ],
   imports: [
     BrowserModule,

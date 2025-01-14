@@ -1,15 +1,28 @@
 <!-- Toolbar -->
 
 <div class="app">
+  <!-- Header section -->
   <div *ngIf="isScrolledDown && innerWidth>1000" class="toolbar">
     <app-header [windowWidth]="innerWidth"></app-header>
   </div>
-  <div class="cover" *ngIf="innerWidth>1400">
+  <!-- <div class="cover" *ngIf="innerWidth>1400">
     <app-header [windowWidth]="innerWidth"></app-header>
+  </div> -->
+  <div class="cover">
+    <div class="blue-overlay"> <!-- Ensure overlay spans full height -->
+      <app-header [windowWidth]="innerWidth"></app-header>
+      <app-cover *ngIf="currentPage === ''" [windowWidth]="innerWidth"></app-cover>
+      <app-cover *ngIf="currentPage !== ''" [title]="pageTitle" [path]="currentPage"
+        [windowWidth]="innerWidth"></app-cover>
+    </div>
   </div>
-  <div style="width: 100%" *ngIf="!(innerWidth >= 1400)">
+
+
+
+
+  <!-- <div style="width: 100%" *ngIf="!(innerWidth >= 1400)">
     <app-header [windowWidth]="innerWidth"></app-header>
-  </div>
+  </div> -->
 
   <div style="display: flexbox">
     <h1>TEMPORARY TEXT</h1>

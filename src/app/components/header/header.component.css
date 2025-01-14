@@ -42,12 +42,17 @@
 .header-option {
   transition: color 0.2s ease-in-out;
   margin-right: 20px;
+  color: white; /* Default color */
 }
 
 .header-option:hover {
   cursor: pointer;
-  color: var(--bs-primary);
+  color: var(--bs-primary); /* Hover color */
   transition: color 0.2s ease-in-out;
+}
+
+.header-option.selected {
+  color: #fea116; /* Selected color */
 }
 
 .header-option-mobile {
@@ -94,7 +99,7 @@
 
 @media (min-width: 1400px) {
   .header {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 @media (max-width: 1000px) {
