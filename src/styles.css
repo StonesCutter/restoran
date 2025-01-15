@@ -14,9 +14,15 @@
   src: url("./assets/fonts/Heebo-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Pacifico";
+  src: url("./assets/fonts/Pacifico-Regular.ttf") format("truetype");
+}
+
 :root {
   --primary-font: "Nunito-bold", sans-serif;
   --secondary-font: "Heebo", sans-serif;
+  --footer-font: "Pacifico", sans-serif;
   --font-size-base: 15px;
   --font-size-heading: 2rem;
   --bs-primary: #fea116;

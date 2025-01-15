@@ -17,6 +17,7 @@ import { SquaredButtonComponent } from './components/squared-button/squared-butt
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoverComponent } from './components/cover/cover.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CoverComponent } from './components/cover/cover.component';
     ContactComponent,
     HeaderComponent,
     SquaredButtonComponent,
-    CoverComponent
+    CoverComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

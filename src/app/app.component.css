@@ -36,3 +36,16 @@
   min-height: 300px;
   background-color: rgba(2, 12, 44, 0.8);
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1320px;
+}
+
+@media (max-width: 1400px) {
+  .main-container {
+    min-width: 100%;
+  }
+}
