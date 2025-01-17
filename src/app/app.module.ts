@@ -18,6 +18,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoverComponent } from './components/cover/cover.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardServiceComponent } from './components/card-service/card-service.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     SquaredButtonComponent,
     CoverComponent,
-    FooterComponent
+    FooterComponent,
+    CardServiceComponent
   ],
   imports: [
     BrowserModule,

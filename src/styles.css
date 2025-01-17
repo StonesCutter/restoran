@@ -30,4 +30,13 @@
   --bs-light: #f1f8ff;
   --bs-warning: #ffc107;
   --bs-gray: #6c757d;
+  --light: #f1f8ff;
+}
+
+.bar-title {
+  border: 1px solid var(--bs-primary);
+  height: 0px;
+  width: 40px;
+  margin-left: 10px;
+  margin-top: 5px;
 }

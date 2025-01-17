@@ -176,14 +176,6 @@
   padding-right: 10px;
 }
 
-.bar-title {
-  border: 2px solid var(--bs-primary);
-  height: 0px;
-  width: 40px;
-  margin-left: 10px;
-  margin-top: 5px;
-}
-
 .divisor {
   padding: 30px;
   border-color: var(--bs-gray);

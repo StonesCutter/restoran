@@ -1,0 +1,90 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem !important;
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
+  color: var(--bs-primary);
+  max-width: 240px;
+  margin: 10px;
+  border-radius: 3px;
+
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
+
+  .icon {
+    justify-content: start;
+    width: 100%;
+    font-size: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    justify-content: start;
+    color: black;
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .text {
+    justify-content: start;
+    color: var(--bs-gray);
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.service-card:hover {
+  background-color: var(--bs-primary);
+  color: white;
+  transition: background-color 0.5s ease-in-out;
+
+  .title {
+    color: white;
+  }
+  .text {
+    color: white;
+  }
+}
+
+@media (max-width: 1350px) {
+  .service-card {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-container {
+    min-width: 100%;
+  }
+  .service-card {
+    width: 170px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .service-card {
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .service-card {
+    min-width: 270px;
+  }
+}
+@media (max-width: 720px) {
+  .service-card {
+    min-width: -webkit-fill-available;
+  }
+}
+
+/* @media (max-width: 450px) {
+  .service-card {
+    min-width: 0px;
+  }
+} */

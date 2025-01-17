@@ -1,28 +1,41 @@
 <!-- Toolbar -->
-
 <div class="app">
-  <!-- Header section -->
-  <div *ngIf="isScrolledDown && innerWidth>1000" class="toolbar">
+  <div *ngIf="isScrolledDown && innerWidth > 1000" class="toolbar">
     <app-header [windowWidth]="innerWidth"></app-header>
   </div>
-  <!-- <div class="cover" *ngIf="innerWidth>1400">
-    <app-header [windowWidth]="innerWidth"></app-header>
-  </div> -->
+
   <div class="cover">
-    <div class="blue-overlay"> <!-- Ensure overlay spans full height -->
+    <div class="blue-overlay">
       <app-header [windowWidth]="innerWidth"></app-header>
       <app-cover *ngIf="currentPage === ''" [windowWidth]="innerWidth"></app-cover>
       <app-cover *ngIf="currentPage !== ''" [title]="pageTitle" [path]="currentPage"
         [windowWidth]="innerWidth"></app-cover>
     </div>
   </div>
+  <div class="router-outlet">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="main-container">
+    <app-footer style="width: 100%"></app-footer>
+  </div>
+</div>
 
 
 
 
-  <!-- <div style="width: 100%" *ngIf="!(innerWidth >= 1400)">
+<!-- <div class="app">
+  <div *ngIf="isScrolledDown && innerWidth>1000" class="toolbar">
     <app-header [windowWidth]="innerWidth"></app-header>
-  </div> -->
+  </div>
+  <div class="cover">
+    <div class="blue-overlay"> 
+      <app-header [windowWidth]="innerWidth"></app-header>
+      <app-cover *ngIf="currentPage === ''" [windowWidth]="innerWidth"></app-cover>
+      <app-cover *ngIf="currentPage !== ''" [title]="pageTitle" [path]="currentPage"
+        [windowWidth]="innerWidth"></app-cover>
+    </div>
+  </div>
 
   <div class="main-container">
     <h1>TEMPORARY TEXT</h1>
@@ -49,5 +62,4 @@
     <h1>TEMPORARY TEXT</h1>
     <app-footer style="width: 100%"></app-footer>
   </div>
-
-</div>
+</div> -->
