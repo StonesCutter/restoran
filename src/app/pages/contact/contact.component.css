@@ -1,0 +1,225 @@
+.title-contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-title {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--footer-font);
+  color: var(--bs-primary);
+  font-size: 20px;
+}
+
+.contact-main-title {
+  font-size: calc(1.375rem + 1.5vw);
+  font-family: var(--primary-font);
+  text-align: center;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  min-width: 1320px;
+}
+
+.contact-column {
+  margin-top: 40px;
+}
+
+.contact-titles {
+  font-size: 23px;
+  color: #fea116;
+  font-family: var(--footer-font);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.contact-icon {
+  color: #fea116;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.contact-sub-text {
+  color: var(--bs-gray);
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: start;
+
+  padding: 50px;
+}
+
+.map {
+  width: 50%;
+  height: 370px;
+}
+
+.form {
+  width: 50%;
+  padding-right: 5px;
+
+  .first-line {
+    display: flex;
+    flex-direction: row;
+    input {
+      width: 50%;
+      margin-left: 20px;
+      height: 50px;
+      padding-left: 10px;
+      border: 1px solid rgb(203, 203, 203);
+      border-radius: 3px;
+    }
+    input:focus {
+      border-color: var(--bs-primary);
+      outline: none;
+      box-shadow: 0 0 0 0.3rem rgba(255, 149, 0, 0.25);
+      border-radius: 5px;
+    }
+  }
+
+  .second-line {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    input {
+      width: 100%;
+      height: 50px;
+      margin-left: 20px;
+      padding-left: 10px;
+      border: 1px solid rgb(203, 203, 203);
+      border-radius: 3px;
+    }
+
+    input:focus {
+      border-color: var(--bs-primary);
+      outline: none;
+      box-shadow: 0 0 0 0.3rem rgba(255, 149, 0, 0.25);
+      border-radius: 5px;
+    }
+  }
+
+  .third-line {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    padding-left: 20px;
+    textarea {
+      height: 150px;
+      padding-left: 10px;
+      padding-top: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      border-color: rgb(203, 203, 203);
+      border-radius: 3px;
+    }
+
+    textarea:focus {
+      border-color: var(--bs-primary);
+      outline: none;
+      box-shadow: 0 0 0 0.3rem rgba(255, 149, 0, 0.25);
+      border-radius: 5px;
+    }
+  }
+  .button-line {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    button {
+      height: 50px;
+      width: 100%;
+    }
+    .button {
+      color: white;
+      background-color: var(--bs-primary);
+      border: 1px;
+      border-radius: 3px;
+      font-size: 16px;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .button:hover {
+      background-color: var(--bs-warning);
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .contact-content {
+    min-width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .button-line {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .map {
+    width: 100%;
+    height: 370px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    width: 100%;
+
+    .first-line {
+      flex-direction: column;
+
+      input {
+        width: auto;
+        margin-left: 0px;
+        margin-top: 15px;
+        padding-left: 10px;
+      }
+    }
+    .second-line {
+      input {
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+    .third-line {
+      padding-left: 0px;
+      textarea {
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 270px) {
+  .contact-titles {
+    margin-left: 20px;
+  }
+
+  .contact-icon {
+    margin-left: 20px;
+  }
+}

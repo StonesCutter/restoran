@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoverComponent } from './components/cover/cover.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardServiceComponent } from './components/card-service/card-service.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,8 @@ import { CardServiceComponent } from './components/card-service/card-service.com
     FontAwesomeModule,
     MatMenuModule,
     BrowserAnimationsModule,
+    GoogleMapsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
