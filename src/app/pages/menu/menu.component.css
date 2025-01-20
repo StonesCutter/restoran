@@ -1,0 +1,75 @@
+.title-contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-title {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--footer-font);
+  color: var(--bs-primary);
+  font-size: 20px;
+}
+
+.contact-main-title {
+  font-size: calc(1.375rem + 1.5vw);
+  font-family: var(--primary-font);
+  text-align: center;
+}
+
+.tab-icon {
+  color: var(--bs-primary);
+  font-size: 35px;
+}
+
+.tab-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 20px;
+}
+
+.tab-subtitle {
+  font-weight: bold;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  color: black;
+}
+
+.tab-container {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dishes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+}
+
+.single-dish {
+  padding: 20px;
+  width: 45%;
+}
+
+.mat-tab-group .mat-tab-label.mat-tab-label-active {
+  color: #ff5722 !important;
+}
+
+.mat-tab-group .mat-ink-bar {
+  background-color: #ff5722 !important;
+}
+
+@media (max-width: 1000px) {
+  .single-dish {
+    padding: 40px;
+    width: 90%;
+  }
+}

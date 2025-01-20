@@ -1,0 +1,43 @@
+.menu-card-container {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  width: 100%;
+
+  .menu-card-img {
+    width: 80px;
+  }
+
+  .menu-text-container {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu-card-second-section {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--bs-gray);
+  }
+
+  .menu-card-first-section {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .title {
+      color: black;
+      width: 100%;
+    }
+    .price {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      color: var(--bs-primary);
+    }
+  }
+}

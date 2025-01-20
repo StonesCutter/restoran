@@ -1,1 +1,74 @@
-<p>menu works!</p>
+<div style="min-width: 100%; margin-bottom: 80px; margin-top: 80px;">
+    <div class="title-contact-container">
+        <div class="contact-title">
+            <div class="bar-title" style="margin-right: 10px;"></div>
+            <div style="margin-top: -10px">Food Menu</div>
+            <div class="bar-title" style="margin-left: 10px;"></div>
+        </div>
+        <div class="contact-main-title">Most Popular Items</div>
+    </div>
+    <div class="tab-container">
+        <mat-tab-group (selectedTabChange)="onTabSelected($event)" style="max-width: 550px" mat-stretch-tabs="false"
+            mat-align-tabs="center">
+            <mat-tab class="my-mat-tab">
+                <ng-template mat-tab-label>
+                    <fa-icon [icon]="faMugSaucer" class="tab-icon"></fa-icon>
+                    <div class="tab-titles">
+                        <div class="tab-title">Popular</div>
+                        <div class="tab-subtitle">Breakfast</div>
+                    </div>
+                </ng-template>
+                <div class="tab-content">
+
+                </div>
+            </mat-tab>
+            <mat-tab class="my-mat-tab">
+                <ng-template mat-tab-label>
+                    <fa-icon [icon]="faBurger" class="tab-icon"></fa-icon>
+                    <div class="tab-titles">
+                        <div class="tab-title">Special</div>
+                        <div class="tab-subtitle">Lunch</div>
+                    </div>
+                </ng-template>
+                <div class="tab-content">
+                </div>
+            </mat-tab>
+            <mat-tab class="my-mat-tab">
+                <ng-template mat-tab-label>
+                    <fa-icon [icon]="faUtensils" class="tab-icon"></fa-icon>
+                    <div class="tab-titles">
+                        <div class="tab-title">Lovely</div>
+                        <div class="tab-subtitle">Dinner</div>
+                    </div>
+                </ng-template>
+                <div class="tab-content">
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+
+    <div *ngIf="selectedTab===0">
+        <div class="dishes-grid">
+            <div *ngFor="let dish of dishes" class="single-dish">
+                <app-menu-card [title]="dish.title" [text]="dish.text" [image]="dish.image"
+                    [price]="dish.price"></app-menu-card>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedTab===1">
+        <div class="dishes-grid">
+            <div *ngFor="let dish of dishes" class="single-dish">
+                <app-menu-card [title]="dish.title" [text]="dish.text" [image]="dish.image"
+                    [price]="dish.price"></app-menu-card>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="selectedTab===2">
+        <div class="dishes-grid">
+            <div *ngFor="let dish of dishes" class="single-dish">
+                <app-menu-card [title]="dish.title" [text]="dish.text" [image]="dish.image"
+                    [price]="dish.price"></app-menu-card>
+            </div>
+        </div>
+    </div>
+</div>

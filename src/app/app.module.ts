@@ -20,6 +20,8 @@ import { CoverComponent } from './components/cover/cover.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardServiceComponent } from './components/card-service/card-service.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import {MatTabsModule} from '@angular/material/tabs';
+import { MenuCardComponent } from './components/menu-card/menu-card.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     SquaredButtonComponent,
     CoverComponent,
     FooterComponent,
-    CardServiceComponent
+    CardServiceComponent,
+    MenuCardComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatMenuModule,
     BrowserAnimationsModule,
     GoogleMapsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
