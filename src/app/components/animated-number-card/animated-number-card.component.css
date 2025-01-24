@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  border-left: 5px solid #dee2e6 !important;
+  border-color: #fea116 !important;
+
+  .number {
+    font-size: calc(1.425rem + 2.1vw);
+    margin-left: 15px;
+    font-weight: bold;
+    font-family: var(--primary-font);
+    color: var(--bs-primary);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 40px;
+
+    .title {
+      font-size: 16px;
+      color: var(--bs-gray);
+    }
+
+    .text {
+      font-family: var(--primary-font);
+      font-size: 16px;
+    }
+  }
+}

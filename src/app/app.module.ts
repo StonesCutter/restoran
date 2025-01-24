@@ -22,6 +22,8 @@ import { CardServiceComponent } from './components/card-service/card-service.com
 import { GoogleMapsModule } from '@angular/google-maps';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MenuCardComponent } from './components/menu-card/menu-card.component';
+import { AnimatedNumberCardComponent } from './components/animated-number-card/animated-number-card.component';
+import { ChefCardComponent } from './components/chef-card/chef-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { MenuCardComponent } from './components/menu-card/menu-card.component';
     CoverComponent,
     FooterComponent,
     CardServiceComponent,
-    MenuCardComponent
+    MenuCardComponent,
+    AnimatedNumberCardComponent,
+    ChefCardComponent
   ],
   imports: [
     BrowserModule,

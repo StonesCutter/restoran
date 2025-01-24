@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class SquaredButtonComponent {
   @Input() buttonText = 'Click'; 
-  @Input() heightSelected = '40px'
+  @Input() heightSelected?: string = '40px'
   @Output() buttonClicked = new EventEmitter<void>(); 
 
   onClick() {
