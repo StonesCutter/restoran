@@ -19,3 +19,72 @@
   font-family: var(--primary-font);
   text-align: center;
 }
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: top;
+  /* max-width: 1000px; */
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 1250px;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+
+.single-chef {
+  height: 380px;
+}
+
+@media (max-width: 1300px) {
+  .team-container {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .team-container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .team-container {
+    max-width: 700px;
+  }
+
+  .team {
+    min-height: 1300px;
+  }
+
+  .single-chef {
+    height: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .team-container {
+    max-width: 500px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    height: 1500px;
+  }
+
+  .team {
+    min-height: 2600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .team-container {
+    width: 100%;
+  }
+}
