@@ -1,1 +1,70 @@
-<p>booking works!</p>
+<div style="min-width: 100%; margin-bottom: 80px; margin-top: 80px;">
+
+    <div class="contact-form-container">
+        <div class="video">
+            <button type="button" class="btn-play"
+                (click)="showVideoModal('https://www.youtube.com/embed/DWRcNpR6Kdc')">
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Modal for Video -->
+        <div *ngIf="isVideoModalVisible" class="video-modal">
+            <div class="video-modal-content">
+                <div class="video-modal-header">
+                    <h3 class="video-modal-title">YouTube Video</h3>
+                    <button class="close-button" (click)="closeVideoModal()"><fa-icon [icon]="faX"
+                            style="margin-top: 3px;"></fa-icon></button>
+                </div>
+                <div class="video-modal-body">
+                    <iframe width="560" height="315" [src]="sanitizer.bypassSecurityTrustResourceUrl(videoUrl)"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <div class="form">
+
+            <div class="title-about-container" style="align-items: left; justify-content: start;">
+
+                <div class="about-title" style="justify-content: start;">
+                    <div style="margin-top: -10px">About Us</div>
+                    <div class="bar-title" style="margin-left: 10px;"></div>
+                </div>
+                <div class="about-main-title">Book A Table Online</div>
+            </div>
+            <div class="first-line">
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="second-line" style="margin-top: 15px;">
+
+                <mat-form-field class="mat-inputs">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="mat-inputs">
+                    <mat-label>No Of People</mat-label>
+                    <mat-select>
+                        <mat-option value="1">People 1</mat-option>
+                        <mat-option value="2">People 2</mat-option>
+                        <mat-option value="3">People 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="third-line">
+                <textarea class="form-control" placeholder="Leave a message here" id="message"
+                    style="width: 100%"></textarea>
+            </div>
+            <div class="button-line">
+                <button class="button" type="submit">SEND MESSAGE</button>
+            </div>
+
+        </div>
+    </div>
+</div>

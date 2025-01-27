@@ -24,6 +24,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { MenuCardComponent } from './components/menu-card/menu-card.component';
 import { AnimatedNumberCardComponent } from './components/animated-number-card/animated-number-card.component';
 import { ChefCardComponent } from './components/chef-card/chef-card.component';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -53,7 +59,13 @@ import { ChefCardComponent } from './components/chef-card/chef-card.component';
     BrowserAnimationsModule,
     GoogleMapsModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
