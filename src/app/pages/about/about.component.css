@@ -42,26 +42,6 @@
   }
 }
 
-.title-about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-.about-title {
-  display: flex;
-  flex-direction: row;
-  font-family: var(--footer-font);
-  color: var(--bs-primary);
-  font-size: 20px;
-}
-
-.about-main-title {
-  font-size: calc(1.375rem + 1.5vw);
-  font-family: var(--primary-font);
-}
-
 .team-container {
   display: flex;
   flex-direction: row;
@@ -79,6 +59,27 @@
   display: flex;
   justify-content: center;
   height: 450px;
+}
+
+.title-about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--footer-font);
+  color: var(--bs-primary);
+  font-size: 20px;
+}
+
+.about-main-title {
+  font-size: calc(1.2rem + 1.5vw);
+  font-family: var(--primary-font);
+  color: rgb(0, 0, 0);
 }
 
 @media (max-width: 1300px) {

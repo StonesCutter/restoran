@@ -1,1 +1,97 @@
-<p>home works!</p>
+<div style="min-width: 100%; margin-bottom: 80px; margin-top: 80px;">
+    <div class=" cards-container">
+        <div class="single-card-container">
+            <app-card-service [icon]="faUserTie" [title]="'Master Chefs'"
+                [text]="'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'"></app-card-service>
+        </div>
+        <div class="single-card-container">
+            <app-card-service [icon]="faUtensils" [title]="'Quality Food'"
+                [text]="'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'"></app-card-service>
+        </div>
+        <div class="single-card-container">
+            <app-card-service [icon]="faCartPlus" [title]="'Online Order'"
+                [text]="'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'"></app-card-service>
+        </div>
+        <div class="single-card-container">
+            <app-card-service [icon]="faHeadset" [title]="'24/7 Service'"
+                [text]="'Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam'"></app-card-service>
+        </div>
+
+    </div>
+    <div style="display: flex; flex-direction: column;  justify-content: center;">
+        <div class="first-section-about">
+            <div class="left-section">
+                <div class="image-container">
+                    <img class="about-img" [src]="ImageAbout1" />
+                </div>
+                <div class="image-container" style="justify-content: start; align-items: end;">
+                    <img class="about-img" [src]="ImageAbout2" style="width: 75%" />
+                </div>
+                <div class="image-container" style="justify-content: end; align-items: start;">
+                    <img class="about-img" [src]="ImageAbout3" style="width: 75%" />
+                </div>
+                <div class="image-container">
+                    <img class="about-img" [src]="ImageAbout4" />
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="title-about-container" style="align-items: left; justify-content: start;">
+
+                    <div class="about-title" style="justify-content: start;">
+                        <div style="margin-top: -10px">About Us</div>
+                        <div class="bar-title" style="margin-left: 10px;"></div>
+                    </div>
+                    <div class="about-main-title">Welcome to <fa-icon [icon]="faUtensils"
+                            style="margin-right: 15px; color: var(--bs-primary)">
+                        </fa-icon>Restoran</div>
+                </div>
+                <p style="color: var(--bs-gray)">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
+                    amet diam et eos erat ipsum et
+                    lorem et sit, sed stet lorem sit.</p>
+                <p style="color: var(--bs-gray)">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
+                    amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore
+                    erat
+                    amet</p>
+                <div class="numbers-container">
+                    <div class="single-number">
+                        <app-animated-number-card [targetNumber]="15" [duration]="2000" [title]="'Years of'"
+                            [text]="'EXPERIENCE'"></app-animated-number-card>
+                    </div>
+                    <div class="single-number">
+                        <app-animated-number-card [targetNumber]="50" [duration]="2000" [title]="'Popular'"
+                            [text]="'MASTER CHEFS'"></app-animated-number-card>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <app-squared-button [buttonText]="'READ MORE'" (buttonClicked)="onButtonClicked()"
+                        [heightSelected]="'60px'"></app-squared-button>
+                </div>
+            </div>
+        </div>
+        <app-menu></app-menu>
+        <app-booking style="margin-top: -100px;"></app-booking>
+        <div>
+            <div class="title-home-container" style="align-items: center; margin-top: 30px;">
+
+                <div class="home-title">
+                    <div class="bar-title" style="margin-left: 10px;"></div>
+                    <div style="margin-top: -10px">Team Members</div>
+                    <div class="bar-title" style="margin-left: 10px;"></div>
+                </div>
+                <div class="home-main-title">Our Master Chefs</div>
+            </div>
+            <div class="team">
+                <div class="team-container">
+                    <app-chef-card [fullName]="'Full Name'" [designation]="'Designation'"
+                        [picture]="ImageTeam1"></app-chef-card>
+                    <app-chef-card [fullName]="'Full Name'" [designation]="'Designation'"
+                        [picture]="ImageTeam2"></app-chef-card>
+                    <app-chef-card [fullName]="'Full Name'" [designation]="'Designation'"
+                        [picture]="ImageTeam3"></app-chef-card>
+                    <app-chef-card [fullName]="'Full Name'" [designation]="'Designation'"
+                        [picture]="ImageTeam4"></app-chef-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
