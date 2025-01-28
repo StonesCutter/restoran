@@ -7,27 +7,19 @@
         </div>
         <div class="contact-main-title">Our Clients Say!!!</div>
     </div>
-    <ngx-slick-carousel [config]="slideConfig">
+
+    <ngx-slick-carousel [config]="slideConfig" class="carousel-container">
         <div slickItem *ngFor="let testimonial of testimonials" class="testimonial-card">
-            <div class="quote-icon">""</div>
-            <p>{{ testimonial.text }}</p>
+            <div class="quote-icon"><fa-icon [icon]="faQuoteLeft" style="font-size: 50px;"></fa-icon></div>
+            <p>{{ testimonial?.text }}</p>
             <div class="client-info">
-                <!-- <div> <strong>{{ testimonial.customer_name }}</strong><br> <span>{{ testimonial.customer_job }}</span> -->
+                <!-- <img src="{{ testimonial.image || 'assets/default-avatar.png' }}" alt="Client Image"
+                    class="client-image"> -->
+                <div>
+                    <strong>{{ testimonial.customer_name }}</strong><br>
+                    <span>{{ testimonial.customer_job }}</span>
+                </div>
             </div>
         </div>
-
     </ngx-slick-carousel>
-
-
-    <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
-        (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-            <img src="{{ slide.img }}" alt="" width="100%">
-        </div>
-    </ngx-slick-carousel>
-
-    <button (click)="addSlide()">Add</button>
-    <button (click)="removeSlide()">Remove</button>
-    <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-    <button (click)="slickModal.unslick()">unslick</button> -->
 </div>

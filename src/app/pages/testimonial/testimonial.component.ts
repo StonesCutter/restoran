@@ -1,37 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { TestimonialService } from 'src/app/services/testimonial.service';
+import { faQuoteLeft} from '@fortawesome/free-solid-svg-icons';
+
+interface TestimonialInterface {
+  customer_job: string;
+  customer_name: string;
+  id: number;
+  text: string;
+}
 
 @Component({
   selector: 'app-testimonial',
   templateUrl: './testimonial.component.html',
   styleUrls: ['./testimonial.component.css']
 })
+
 export class TestimonialComponent implements OnInit{
   constructor(private testimonialService: TestimonialService) {}
 
   ngOnInit(): void {
     this.loadTestimonials()
   }
-
-  testimonials = [
-    {
+  faQuoteLeft =faQuoteLeft;
+  testimonials: [TestimonialInterface] = [
+    { id: 0,
+      customer_job: "",
+      customer_name: "",
       text: 'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.',
-      image: 'assets/images/client1.jpg',
-      name: 'Client Name',
-      profession: 'Profession'
     },
-    {
-      text: 'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.',
-      image: 'assets/images/client2.jpg',
-      name: 'Client Name',
-      profession: 'Profession'
-    },
-    {
-      text: 'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.',
-      image: 'assets/images/client3.jpg',
-      name: 'Client Name',
-      profession: 'Profession'
-    }
+    // {
+    //   text: 'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.',
+    //   image: 'assets/images/client2.jpg',
+    //   name: 'Client Name',
+    //   profession: 'Profession'
+    // },
+    // {
+    //   text: 'Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.',
+    //   image: 'assets/images/client3.jpg',
+    //   name: 'Client Name',
+    //   profession: 'Profession'
+    // }
   ];
 
   // slideConfig = {
